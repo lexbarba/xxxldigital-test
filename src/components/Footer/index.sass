@@ -1,0 +1,32 @@
+@import '../../utils.sass'
+
+.footer-container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-top: 2em
+    padding-top: 1.5em
+    padding-bottom: 1.5em
+    padding-left: 5em
+    padding-right: 5em
+    background-color: $primary
+    font-size: $small
+    background-color: $red
+
+    @include tablet
+        font-size: $medium
+    
+    @include desktop
+        font-size: $medium
+    
+    &__links > a 
+        color: $white
+
+    &__media
+        display: flex
+        justify-content: space-around
+
+        &> a, p
+            padding: .5em
+            color: $white
+

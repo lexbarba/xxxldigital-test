@@ -1,0 +1,112 @@
+@import '../../utils.sass'
+    
+.products-container__product
+    display: flex
+    flex-direction: column
+    height: 25em
+    border: .005em solid $border
+    padding: 0.5em
+
+    &:hover
+        box-shadow: 0 10px 6px -6px $secondary, 0 0 40px rgba(0, 0, 0, 0.1)
+        
+        & .product-data__link 
+            display: block
+            font-size: $large
+            align-self: center
+            margin-top: 1em
+            background-color: $primary
+            width: 100%
+
+            &> a
+                display: block
+                color: $white
+                text-align: center
+                padding-top: .5em
+                padding-bottom: .5em
+                
+    &-eyecatcher
+        display: flex
+        align-items: flex-start
+
+        & > p 
+            background-color: $orange
+            color: $white
+            padding: .2em
+            font-size: $medium  
+        
+    &-image 
+        align-self: center
+        width: 11em
+        height: 11em
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAflBMVEX///8AAAD29vbq6urLy8uurq6SkpJaWlp+fn5tbW0+Pj4tLS38/Pz5+fnIyMiLi4u8vLyysrLT09Py8vJ2dnbf399LS0suLi5kZGReXl5QUFCWlpakpKTl5eXt7e0fHx8RERHY2NiCgoI5OTkmJiYYGBhBQUGenp4VFRUeHh6/8pQpAAAGIUlEQVR4nO2c63aiMBCAuapICHcEBBRl6/b9X3ADaEsSa62mwob5TvtjqesZvzMZJhdUFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOMoA4yBGY4fxP1D7Zo8Bur5B88xPwrGjmTaOb5pg6048ypXpw0ikQM5ASGkyBIMXhtrro5sSYW3g9s530eCxssyzSQefXNddFMGXbyU7WoCNDozj7oLDuTLL7g8GEdXhbuMxIx6P0Di7agnaFNILTlbdvtI/q+p0zTK5tIGq1pZypWT1RcsbuCK26rEjH4GAloXLr2SVlCtiyxk79JcT0q4ISAn5YUhKVLFgZOGxY385NSsL66Q4cbI0JWQSa7HYjh37yzE4WSSJAtaVR65xsty5NfaIG4VtiUesrIot752subUPzlVZSkxXrfYSBlkKL6trCeKhq66SY9bVwtXHDf31BKwr3Dfr+meR7xuqmM+s2U2vY67AXyaIMZkhFqYfnNspxMkyRwt6LJyro7AHadogedgK75avj3ZsSnw9sTgcxtVsEssJdUJFRhii21J8I11KuiVtky4uDlF0kHrFBlX6GaKLsoVv3uBK92MkuiciWnejVUd0kLaLcD5cETRiKwxw6wvjoHV36396i9YX+TXIvwJr9YEl6UTR0Sm6GhWWcR2XdywjOLXn+16XR/HAFUku43ejHomKlqU/2C2hFU1UiQ1zEmiMK/3BD+lFjK1CbJyTgHX1aGqtWCL5dn0QL+uhD6mzibWK5FtndgTJCnhZ8t0Qr8h6aA3P4GV5omMdHVGZVc8hs64U+IdkhbwsCbt4ts169G7ocrdDwYFOAW4cPrjtgNnU8sXGOQ0EdfDKQfo2S7k+N3yEikotGStWCxLiitwq5O5IL4QXVdVT5xUcM+qyK4pOMs6iLyCtIoRPb8+EuFgsTp7MqoD7QUj0hp8WB7WM2YUcrUOgL+OQpWmaRbKdaUbO2ZWmOYI+WrjKrJ7UkuuW+KFKWHLpaWp9kMm0EE+5EmILWRSZPK0p40oTcCi0SGlb0fNvORE0luf7LMaVlcoyEBEn6+nU8lhZ1kJEpBOAHYWEZ99yy7qyLBGRToBfkHXgXKWSnI4HWT/gJcMwFRHpBOBlPZ0FPlfgXRGRTgD+bvh066BnbGJJsx/Gpdbzb+mysuSZTItOLK4rzSQ6MIlEu1KUejgQM7m2w0S7UpT4Y9khTWU77dAnl+OIa4eQn7aLf2km464F6hD6ljH2cC1PaQcmQGAutgV8tc89+Ms8Jz9JXoCub9CsZHkmT2f37OHP0LLlgBxs3WKVD2UtZVlu+BVwQrla5nJ172KxlixjRzRdqoR1lcizZyiaIGdl5bLNDMWBeVmzeQ74x1yRBRX+K2KuZuXSrCiLh8usZG7f4/MDTqytw9gRTZiQkZXM5jsxdH/rFviepYPaLwqvmwd6VNVKZHzq9xp1rvYcvis75luzITTdET9/YCuZy9e0ueonN49XVbl9XHccm/bUGl6eh2I+m4Z0pQ658amr41kV4e3YrjIg38qTJLF8KR9yuoKp0nxdp5NPV4RNf6oBVc890vJfoTGu1OyrV5qbNcVOroPc97BlZakXB8Hhbfd+/HxM/Ei7Wh/lOWx7LzYnqz8VWub7XWPbdrM/9tOYwGZkrTdz26VAnKt+HGK12dg9jXpqr7CjcL225zYOdV7WmlwOVHuA2i6+bNlhuLbnNnO+Lgtt7A1li9wit3xmyXLm/W54WZaiFH9pWQ255nOymtmtIyecLDLJOzY2zT5U4mb9xtgaO/aXw/akqqqTscm4sv+QBiJhZB1leZjiB+wZVwdFMfasrB25IXoNLauR8DjWdxi0qz2ZvHh/OVntooJFVa1mlkvu9EBsp4b4amYpSjaw1Wxvf/GkrOBB29AtaFVczfrbt1SH5tgXrqM9y7zq2L53qpLLPDDh7obnNZh4tSF/at62s96c0A0cfArwmXG4G2xGlEEAp4so3ujU+jPrRPoOfTe0pc5tEvhDYnt3UdXs57LA/jDaav/eEN7VbDYbgk+gF1aSpKfZzZYBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4A7+AbJFeXF9EEv9AAAAAElFTkSuQmCC')
+        background-repeat: no-repeat
+        background-position: center
+        margin-top: 1em
+        
+        @include tablet
+            width: 14em
+            height: 14em
+        
+        & > a
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-content: center
+            height: 100%
+
+            & > img
+                align-self: center
+                width: 11em
+
+                @include tablet
+                    width: 14em
+
+    &-data 
+        display: flex
+        flex-direction: column
+        justify-self: center
+        padding-left: 1em
+        padding-right: 1em
+        padding-top: 1em
+
+        & > h2 
+            color: $secondary
+            font-size: $xlarge
+            padding-bottom: .2em
+        
+        & > div
+            font-size: $large
+            padding-bottom: .2em
+            display: flex
+            justify-content: space-between
+            font-size: $xlarge
+            
+            & > h4 
+                color: $primary
+                
+            & > p
+                font-size: $xxlarge 
+
+        & > p, span
+            font-size: $medium
+            color: $secondary
+            align-self: flex-end
+
+.product-data
+    
+    &__price
+        color: $primary
+        text-decoration: line-through
+
+    &__priceSale
+        color: $red
+
+    &__link
+        display: none
+
+        &> a
+            display: none
+
+.empty
+    height: 1.3em

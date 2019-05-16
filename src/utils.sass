@@ -1,0 +1,54 @@
+/* Media Queries */
+
+$tablet-width: 768px
+$desktop-width: 1024px
+
+@mixin tablet
+  @media (min-width: #{$tablet-width}) 
+    @content
+
+@mixin desktop
+  @media (min-width: #{$desktop-width}) 
+    @content
+    
+/* Colors */
+
+$primary: #0F0F0F
+$secondary: #B7B7B7
+$white: #FFFFFF
+$orange: #FF9100
+$red: #E2001A
+$border: rgb(247, 247, 247)
+
+/* Font size */
+
+$xsmall: 0.5rem
+$small: 0.6rem
+$medium: 0.8rem
+$large: 1rem
+$xlarge: 1.1rem
+$xxlarge: 1.3rem
+
+/* Links */
+a 
+  color: $primary
+
+a:link
+  color: $primary
+  &:visited
+      color: $primary
+
+/* Cursor */
+.pointer
+  cursor: pointer
+
+/* Select */
+select
+  text-align-last: center
+  width: 20em
+
+  @include tablet
+    width: 30em
+
+  @include desktop
+    width: 56em

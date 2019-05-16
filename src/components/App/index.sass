@@ -1,0 +1,20 @@
+.container
+    display: flex
+    flex-direction: column
+
+.loading-container
+    display: flex
+    height: 100vh
+    width: 100wh
+    justify-content: center
+
+    &__logo
+        width: 10em
+        align-self: center
+        animation: move 2s linear infinite
+    
+@keyframes move
+    from
+        transform: rotateY(0deg) 
+    to
+        transform: rotateY(360deg)
